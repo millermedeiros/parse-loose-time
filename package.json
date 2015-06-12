@@ -1,0 +1,31 @@
+{
+  "name": "parse-loose-time",
+  "version": "1.0.0",
+  "description": "parse time strings into {hour,minute} object, specially useful for user input (ie. speech recognition). supports british time format (\"a quarter past five p.m.\")",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/millermedeiros/parse-loose-time.git"
+  },
+  "keywords": [
+    "time",
+    "parse",
+    "human",
+    "natural"
+  ],
+  "author": "Miller Medeiros",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/millermedeiros/parse-loose-time/issues"
+  },
+  "homepage": "https://github.com/millermedeiros/parse-loose-time",
+  "devDependencies": {
+    "tape": "^4.0.0"
+  }
+}
