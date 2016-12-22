@@ -11,6 +11,8 @@ var knownWords = [
 ];
 // match "p" after digit for "pm"
 var rPm = /\d\s*(o.*clock\s*)?p/i;
+// match "a" after digit for "am"
+var rAm = /\d\s*a/i;
 
 var checkKnowWords = {
   test: function(str) {
@@ -71,6 +73,10 @@ function parseNumeric(str) {
 
   if (hour < 12 && str.match(rPm)) {
     hour += 12;
+  }
+
+  if (hour === 12 && str.match(rAm)) {
+    hour = 0;
   }
 
   return {

@@ -15,6 +15,12 @@ This library should support *at least* these time formats:
 630am
 6:30am
 6:30 a.m.
+12a
+12 am
+12:11am
+12p
+12 pm
+12:11pm
 2134
 21:34
 21.34

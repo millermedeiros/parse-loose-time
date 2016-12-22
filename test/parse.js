@@ -11,10 +11,27 @@ test('numeric', function(t) {
   t.deepEqual(parse('3h20m'), { hour: 3, minute: 20 }, '3h20m');
   t.deepEqual(parse('3h20min'), { hour: 3, minute: 20 }, '3h20min');
   t.deepEqual(parse('3 20'), { hour: 3, minute: 20 }, '3 20');
+  t.deepEqual(parse('320am'), { hour: 3, minute: 20 }, '320am');
   t.deepEqual(parse('3 20 am'), { hour: 3, minute: 20 }, '3 20 am');
   t.deepEqual(parse('3 20 pm'), { hour: 15, minute: 20 }, '3 20 pm');
   t.deepEqual(parse('3:20 p.m.'), { hour: 15, minute: 20 }, '3:20 p.m.');
   t.deepEqual(parse('21.34'), { hour: 21, minute: 34 }, '21.34');
+  t.end();
+});
+
+test('12am', function(t) {
+  t.deepEqual(parse('12a'), { hour: 0, minute: 0 }, '12a');
+  t.deepEqual(parse('12am'), { hour: 0, minute: 0 }, '12am');
+  t.deepEqual(parse('12:00am'), { hour: 0, minute: 0 }, '12:00am');
+  t.deepEqual(parse('12:11am'), { hour: 0, minute: 11 }, '12:11am');
+  t.end();
+});
+
+test('12pm', function(t) {
+  t.deepEqual(parse('12p'), { hour: 12, minute: 0 }, '12p');
+  t.deepEqual(parse('12pm'), { hour: 12, minute: 0 }, '12pm');
+  t.deepEqual(parse('12:00pm'), { hour: 12, minute: 0 }, '12:00pm');
+  t.deepEqual(parse('12:11pm'), { hour: 12, minute: 11 }, '12:11pm');
   t.end();
 });
 
