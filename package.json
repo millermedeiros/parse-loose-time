@@ -1,6 +1,6 @@
 {
   "name": "parse-loose-time",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "parse time strings into {hour,minute} object, specially useful for user input (ie. speech recognition). supports british time format (\"a quarter past five p.m.\")",
   "main": "index.js",
   "directories": {
